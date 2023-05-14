@@ -14,6 +14,7 @@ class GptChatAgent(BaseAgent):
         self.model = model
         self.log = logging.Logger("GptChatAgent")
         self.set_api_key()
+        self.messages = []
 
     def set_api_key(self):
         if openai.api_key:
@@ -24,3 +25,9 @@ class GptChatAgent(BaseAgent):
 
         with open(self._OPENAI_KEY_PATH) as f:
             openai.api_key = f.read().strip()
+
+    def tell(self, message: str):
+        """TODO"""
+
+    def listen(self) -> str:
+        """TODO"""
