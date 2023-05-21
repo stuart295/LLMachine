@@ -15,7 +15,7 @@ class MockAgent(BaseAgent):
         if self.response_func:
             self.last_response = self.response_func(self.input)
         else:
-            self.last_response = "boop"
+            self.last_response = self.input
 
         return self.last_response
 
