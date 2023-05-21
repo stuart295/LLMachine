@@ -2,8 +2,10 @@ import abc
 
 class BaseAgent:
 
-    def __init__(self):
+    def __init__(self, identifier: str):
         self.last_response = None
+        self.id = identifier
+
 
     @abc.abstractmethod
     def tell(self, message: str):

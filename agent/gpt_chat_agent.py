@@ -9,8 +9,8 @@ class GptChatAgent(BaseAgent):
 
     _OPENAI_KEY_PATH = "./openai_key"
 
-    def __init__(self, model="gpt-4"):
-        super().__init__()
+    def __init__(self, identifier: str, model="gpt-4"):
+        super().__init__(identifier)
         self.model = model
         self.log = logging.Logger("GptChatAgent")
         self.set_api_key()
